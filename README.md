@@ -34,16 +34,20 @@ Examples of analytical databases:
 
 #### Short Example - Before (wide format):  
 
-Machine | Temp | Vibration
-M1      | 70   | 0.3
-M2      | 75   | 0.5
+| Machine | Temp | Vibration |
+| ------- | ---- | --------- |
+| M1      | 70   | 0.3       |
+| M2      | 75   | 0.5       |
+
 
 #### After Unpivot (long format): 
 
-Machine | Metric     | Value
-M1      | Temp       | 70
-M1      | Vibration  | 0.3
-M2      | Temp       | 75
-M2      | Vibration  | 0.5
+| Machine | Metric    | Value |
+| ------- | --------- | ----- |
+| M1      | Temp      | 70    |
+| M1      | Vibration | 0.3   |
+| M2      | Temp      | 75    |
+| M2      | Vibration | 0.5   |
+ 
  
 
