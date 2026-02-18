@@ -50,4 +50,34 @@ Examples of analytical databases:
 | M2      | Vibration | 0.5   |
  
  
+### Steps to convert the CSV file to Parquet format 
 
+- CSV is simple and human-readable.
+- Parquet is compact, faster, and better for large-scale analytics. 
+
+
+**Step 1**: Setup and confirm the kernel environment  
+```python
+import sys
+print("python:", sys.executable)
+
+try:
+    import pyarrow
+    print("pyarrow:", pyarrow.__version__)
+except Exception as e:
+    print("pyarrow import failed:", repr(e))
+```
+
+**Step 2**:  Install pyarrow into this kernel 
+
+```python
+import sys
+!{sys.executable} -m pip install --upgrade pyarrow
+```
+ 
+
+**Step 3**: Save as parquet  
+
+```
+data.to_parquet("data_timeseries.parquet", index=False, compression="snappy")
+```
